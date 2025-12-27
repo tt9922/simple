@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages デプロイ確認</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    
+    <main class="container">
+        <section class="card">
+            <header>
+                <div class="status-badge">
+                    <span class="pulse"></span>
+                    Verified
+                </div>
+                <h1>Deployment Success</h1>
+                <p class="subtitle">GitHub Pages のデプロイが正常に確認されました。</p>
+            </header>
+            
+            <div class="details">
+                <div class="detail-item">
+                    <span class="label">Project</span>
+                    <span class="value">Simple Verification</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Status</span>
+                    <span class="value success">Live</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Last Updated</span>
+                    <span class="value" id="current-date">--/--/--</span>
+                </div>
+            </div>
+
+            <footer>
+                <p>Hello World from Antigravity Agent</p>
+                <div class="social-links">
+                    <span class="icon">🚀</span>
+                    <span class="icon">✨</span>
+                    <span class="icon">💻</span>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <script>
+        // Set current date
+        const dateElement = document.getElementById('current-date');
+        const now = new Date();
+        dateElement.textContent = now.toLocaleDateString('ja-JP', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    </script>
+</body>
+</html>
